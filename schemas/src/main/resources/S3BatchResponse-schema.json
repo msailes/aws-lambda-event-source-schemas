@@ -1,0 +1,38 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "ResultCode" : {
+      "type" : "string",
+      "enum" : [ "Succeeded", "TemporaryFailure", "PermanentFailure" ]
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "invocationId" : {
+      "type" : "string"
+    },
+    "invocationSchemaVersion" : {
+      "type" : "string"
+    },
+    "results" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "resultCode" : {
+            "$ref" : "#/$defs/ResultCode"
+          },
+          "resultString" : {
+            "type" : "string"
+          },
+          "taskId" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "treatMissingKeysAs" : {
+      "$ref" : "#/$defs/ResultCode"
+    }
+  }
+}

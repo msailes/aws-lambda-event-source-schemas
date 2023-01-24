@@ -1,0 +1,33 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "account" : {
+      "type" : "string"
+    },
+    "detail" : {
+      "type" : "object"
+    },
+    "detailType" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "string"
+    },
+    "region" : {
+      "type" : "string"
+    },
+    "resources" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "source" : {
+      "type" : "string"
+    },
+    "time" : {
+      "type" : "string"
+    }
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "Map(String,String)" : {
+      "type" : "object"
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "body" : {
+      "type" : "string"
+    },
+    "cookies" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "headers" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "isBase64Encoded" : {
+      "type" : "boolean"
+    },
+    "pathParameters" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "queryStringParameters" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "rawPath" : {
+      "type" : "string"
+    },
+    "rawQueryString" : {
+      "type" : "string"
+    },
+    "requestContext" : {
+      "type" : "object",
+      "properties" : {
+        "accountId" : {
+          "type" : "string"
+        },
+        "apiId" : {
+          "type" : "string"
+        },
+        "authentication" : {
+          "type" : "object",
+          "properties" : {
+            "clientCert" : {
+              "type" : "object",
+              "properties" : {
+                "clientCertPem" : {
+                  "type" : "string"
+                },
+                "issuerDN" : {
+                  "type" : "string"
+                },
+                "serialNumber" : {
+                  "type" : "string"
+                },
+                "subjectDN" : {
+                  "type" : "string"
+                },
+                "validity" : {
+                  "type" : "object",
+                  "properties" : {
+                    "notAfter" : {
+                      "type" : "string"
+                    },
+                    "notBefore" : {
+                      "type" : "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "authorizer" : {
+          "type" : "object",
+          "properties" : {
+            "iam" : {
+              "type" : "object",
+              "properties" : {
+                "accessKey" : {
+                  "type" : "string"
+                },
+                "accountId" : {
+                  "type" : "string"
+                },
+                "callerId" : {
+                  "type" : "string"
+                },
+                "cognitoIdentity" : {
+                  "type" : "object",
+                  "properties" : {
+                    "amr" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "string"
+                      }
+                    },
+                    "identityId" : {
+                      "type" : "string"
+                    },
+                    "identityPoolId" : {
+                      "type" : "string"
+                    }
+                  }
+                },
+                "principalOrgId" : {
+                  "type" : "string"
+                },
+                "userArn" : {
+                  "type" : "string"
+                },
+                "userId" : {
+                  "type" : "string"
+                }
+              }
+            },
+            "jwt" : {
+              "type" : "object",
+              "properties" : {
+                "claims" : {
+                  "$ref" : "#/$defs/Map(String,String)"
+                },
+                "scopes" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "string"
+                  }
+                }
+              }
+            },
+            "lambda" : {
+              "type" : "object"
+            }
+          }
+        },
+        "domainName" : {
+          "type" : "string"
+        },
+        "domainPrefix" : {
+          "type" : "string"
+        },
+        "http" : {
+          "type" : "object",
+          "properties" : {
+            "method" : {
+              "type" : "string"
+            },
+            "path" : {
+              "type" : "string"
+            },
+            "protocol" : {
+              "type" : "string"
+            },
+            "sourceIp" : {
+              "type" : "string"
+            },
+            "userAgent" : {
+              "type" : "string"
+            }
+          }
+        },
+        "requestId" : {
+          "type" : "string"
+        },
+        "routeKey" : {
+          "type" : "string"
+        },
+        "stage" : {
+          "type" : "string"
+        },
+        "time" : {
+          "type" : "string"
+        },
+        "timeEpoch" : {
+          "type" : "integer"
+        }
+      }
+    },
+    "routeKey" : {
+      "type" : "string"
+    },
+    "stageVariables" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "version" : {
+      "type" : "string"
+    }
+  }
+}

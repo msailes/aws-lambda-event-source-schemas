@@ -1,0 +1,34 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "requestContext" : {
+      "type" : "object",
+      "properties" : {
+        "approximateInvokeCount" : {
+          "type" : "integer"
+        },
+        "condition" : {
+          "type" : "string"
+        },
+        "functionArn" : {
+          "type" : "string"
+        },
+        "requestId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "requestPayload" : {
+      "type" : "object"
+    },
+    "responseContext" : { },
+    "responsePayload" : { },
+    "timestamp" : {
+      "type" : "string"
+    },
+    "version" : {
+      "type" : "string"
+    }
+  }
+}

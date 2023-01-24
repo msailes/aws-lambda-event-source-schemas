@@ -1,0 +1,74 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "accountId" : {
+      "type" : "string"
+    },
+    "apiId" : {
+      "type" : "string"
+    },
+    "authorizer" : {
+      "type" : "object"
+    },
+    "httpMethod" : {
+      "type" : "string"
+    },
+    "identity" : {
+      "type" : "object",
+      "properties" : {
+        "accessKey" : {
+          "type" : "string"
+        },
+        "accountId" : {
+          "type" : "string"
+        },
+        "apiKey" : {
+          "type" : "string"
+        },
+        "caller" : {
+          "type" : "string"
+        },
+        "cognitoAuthenticationProvider" : {
+          "type" : "string"
+        },
+        "cognitoAuthenticationType" : {
+          "type" : "string"
+        },
+        "cognitoIdentityId" : {
+          "type" : "string"
+        },
+        "cognitoIdentityPoolId" : {
+          "type" : "string"
+        },
+        "sourceIp" : {
+          "type" : "string"
+        },
+        "user" : {
+          "type" : "string"
+        },
+        "userAgent" : {
+          "type" : "string"
+        },
+        "userArn" : {
+          "type" : "string"
+        }
+      }
+    },
+    "path" : {
+      "type" : "string"
+    },
+    "requestId" : {
+      "type" : "string"
+    },
+    "resourceId" : {
+      "type" : "string"
+    },
+    "resourcePath" : {
+      "type" : "string"
+    },
+    "stage" : {
+      "type" : "string"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "datasetName" : {
+      "type" : "string"
+    },
+    "datasetRecords" : {
+      "type" : "object"
+    },
+    "eventType" : {
+      "type" : "string"
+    },
+    "identityId" : {
+      "type" : "string"
+    },
+    "identityPoolId" : {
+      "type" : "string"
+    },
+    "region" : {
+      "type" : "string"
+    },
+    "version" : {
+      "type" : "integer"
+    }
+  }
+}

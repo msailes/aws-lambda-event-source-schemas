@@ -1,0 +1,82 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "Map(String,String)" : {
+      "type" : "object"
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "callerContext" : {
+      "type" : "object",
+      "properties" : {
+        "awsSdkVersion" : {
+          "type" : "string"
+        },
+        "clientId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "region" : {
+      "type" : "string"
+    },
+    "request" : {
+      "type" : "object",
+      "properties" : {
+        "clientMetadata" : {
+          "$ref" : "#/$defs/Map(String,String)"
+        },
+        "session" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "challengeMetadata" : {
+                "type" : "string"
+              },
+              "challengeName" : {
+                "type" : "string"
+              },
+              "challengeResult" : {
+                "type" : "boolean"
+              }
+            }
+          }
+        },
+        "userAttributes" : {
+          "$ref" : "#/$defs/Map(String,String)"
+        },
+        "userNotFound" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "response" : {
+      "type" : "object",
+      "properties" : {
+        "challengeName" : {
+          "type" : "string"
+        },
+        "failAuthentication" : {
+          "type" : "boolean"
+        },
+        "issueTokens" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "triggerSource" : {
+      "type" : "string"
+    },
+    "userName" : {
+      "type" : "string"
+    },
+    "userPoolId" : {
+      "type" : "string"
+    },
+    "version" : {
+      "type" : "string"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "arn" : {
+      "type" : "string"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "ownerIdentity" : {
+      "type" : "object",
+      "properties" : {
+        "principalId" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

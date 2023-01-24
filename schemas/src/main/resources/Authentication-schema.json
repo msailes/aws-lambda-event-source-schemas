@@ -1,0 +1,34 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "clientCert" : {
+      "type" : "object",
+      "properties" : {
+        "clientCertPem" : {
+          "type" : "string"
+        },
+        "issuerDN" : {
+          "type" : "string"
+        },
+        "serialNumber" : {
+          "type" : "string"
+        },
+        "subjectDN" : {
+          "type" : "string"
+        },
+        "validity" : {
+          "type" : "object",
+          "properties" : {
+            "notAfter" : {
+              "type" : "string"
+            },
+            "notBefore" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

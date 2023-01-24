@@ -1,0 +1,32 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "authorizationToken" : {
+      "type" : "string"
+    },
+    "requestContext" : {
+      "type" : "object",
+      "properties" : {
+        "accountId" : {
+          "type" : "string"
+        },
+        "apiId" : {
+          "type" : "string"
+        },
+        "operationName" : {
+          "type" : "string"
+        },
+        "queryString" : {
+          "type" : "string"
+        },
+        "requestId" : {
+          "type" : "string"
+        },
+        "variables" : {
+          "type" : "object"
+        }
+      }
+    }
+  }
+}

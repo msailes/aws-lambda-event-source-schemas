@@ -1,0 +1,39 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "message" : {
+      "type" : "string"
+    },
+    "messageAttributes" : {
+      "type" : "object"
+    },
+    "messageId" : {
+      "type" : "string"
+    },
+    "signature" : {
+      "type" : "string"
+    },
+    "signatureVersion" : {
+      "type" : "string"
+    },
+    "signingCertUrl" : {
+      "type" : "string"
+    },
+    "subject" : {
+      "type" : "string"
+    },
+    "timestamp" : {
+      "type" : "string"
+    },
+    "topicArn" : {
+      "type" : "string"
+    },
+    "type" : {
+      "type" : "string"
+    },
+    "unsubscribeUrl" : {
+      "type" : "string"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "configuration" : {
+      "type" : "object",
+      "properties" : {
+        "accessPointArn" : {
+          "type" : "string"
+        },
+        "payload" : {
+          "type" : "string"
+        },
+        "supportingAccessPointArn" : {
+          "type" : "string"
+        }
+      }
+    },
+    "getObjectContext" : {
+      "type" : "object",
+      "properties" : {
+        "inputS3Url" : {
+          "type" : "string"
+        },
+        "outputRoute" : {
+          "type" : "string"
+        },
+        "outputToken" : {
+          "type" : "string"
+        }
+      }
+    },
+    "protocolVersion" : {
+      "type" : "string"
+    },
+    "userIdentity" : {
+      "type" : "object",
+      "properties" : {
+        "accessKeyId" : {
+          "type" : "string"
+        },
+        "accountId" : {
+          "type" : "string"
+        },
+        "arn" : {
+          "type" : "string"
+        },
+        "principalId" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        }
+      }
+    },
+    "userRequest" : {
+      "type" : "object",
+      "properties" : {
+        "headers" : {
+          "type" : "object"
+        },
+        "url" : {
+          "type" : "string"
+        }
+      }
+    },
+    "xAmzRequestId" : {
+      "type" : "string"
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "Map(String,List(String))" : {
+      "type" : "object"
+    },
+    "Map(String,String)" : {
+      "type" : "object"
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "body" : {
+      "type" : "string"
+    },
+    "headers" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "httpMethod" : {
+      "type" : "string"
+    },
+    "isBase64Encoded" : {
+      "type" : "boolean"
+    },
+    "multiValueHeaders" : {
+      "$ref" : "#/$defs/Map(String,List(String))"
+    },
+    "multiValueQueryStringParameters" : {
+      "$ref" : "#/$defs/Map(String,List(String))"
+    },
+    "path" : {
+      "type" : "string"
+    },
+    "pathParameters" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "queryStringParameters" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "requestContext" : {
+      "type" : "object",
+      "properties" : {
+        "accountId" : {
+          "type" : "string"
+        },
+        "apiId" : {
+          "type" : "string"
+        },
+        "authorizer" : {
+          "type" : "object"
+        },
+        "httpMethod" : {
+          "type" : "string"
+        },
+        "identity" : {
+          "type" : "object",
+          "properties" : {
+            "accessKey" : {
+              "type" : "string"
+            },
+            "accountId" : {
+              "type" : "string"
+            },
+            "apiKey" : {
+              "type" : "string"
+            },
+            "caller" : {
+              "type" : "string"
+            },
+            "cognitoAuthenticationProvider" : {
+              "type" : "string"
+            },
+            "cognitoAuthenticationType" : {
+              "type" : "string"
+            },
+            "cognitoIdentityId" : {
+              "type" : "string"
+            },
+            "cognitoIdentityPoolId" : {
+              "type" : "string"
+            },
+            "sourceIp" : {
+              "type" : "string"
+            },
+            "user" : {
+              "type" : "string"
+            },
+            "userAgent" : {
+              "type" : "string"
+            },
+            "userArn" : {
+              "type" : "string"
+            }
+          }
+        },
+        "path" : {
+          "type" : "string"
+        },
+        "requestId" : {
+          "type" : "string"
+        },
+        "resourceId" : {
+          "type" : "string"
+        },
+        "resourcePath" : {
+          "type" : "string"
+        },
+        "stage" : {
+          "type" : "string"
+        }
+      }
+    },
+    "resource" : {
+      "type" : "string"
+    },
+    "stageVariables" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    }
+  }
+}

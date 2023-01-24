@@ -1,0 +1,93 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "GroupConfiguration" : {
+      "type" : "object",
+      "properties" : {
+        "groupsToOverride" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "iamRolesToOverride" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "preferredRole" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Map(String,String)" : {
+      "type" : "object"
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "callerContext" : {
+      "type" : "object",
+      "properties" : {
+        "awsSdkVersion" : {
+          "type" : "string"
+        },
+        "clientId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "region" : {
+      "type" : "string"
+    },
+    "request" : {
+      "type" : "object",
+      "properties" : {
+        "clientMetadata" : {
+          "$ref" : "#/$defs/Map(String,String)"
+        },
+        "groupConfiguration" : {
+          "$ref" : "#/$defs/GroupConfiguration"
+        },
+        "userAttributes" : {
+          "$ref" : "#/$defs/Map(String,String)"
+        }
+      }
+    },
+    "response" : {
+      "type" : "object",
+      "properties" : {
+        "claimsOverrideDetails" : {
+          "type" : "object",
+          "properties" : {
+            "claimsToAddOrOverride" : {
+              "$ref" : "#/$defs/Map(String,String)"
+            },
+            "claimsToSuppress" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            },
+            "groupOverrideDetails" : {
+              "$ref" : "#/$defs/GroupConfiguration"
+            }
+          }
+        }
+      }
+    },
+    "triggerSource" : {
+      "type" : "string"
+    },
+    "userName" : {
+      "type" : "string"
+    },
+    "userPoolId" : {
+      "type" : "string"
+    },
+    "version" : {
+      "type" : "string"
+    }
+  }
+}

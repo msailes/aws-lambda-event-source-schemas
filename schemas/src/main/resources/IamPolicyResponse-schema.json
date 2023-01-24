@@ -1,0 +1,46 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "context" : {
+      "type" : "object"
+    },
+    "policyDocument" : {
+      "type" : "object",
+      "properties" : {
+        "statement" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "action" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "string"
+                }
+              },
+              "condition" : {
+                "type" : "object"
+              },
+              "effect" : {
+                "type" : "string"
+              },
+              "resource" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        },
+        "version" : {
+          "type" : "string"
+        }
+      }
+    },
+    "principalId" : {
+      "type" : "string"
+    }
+  }
+}

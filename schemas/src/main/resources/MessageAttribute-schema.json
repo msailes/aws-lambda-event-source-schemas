@@ -1,0 +1,70 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "ByteBuffer" : {
+      "type" : "object",
+      "properties" : {
+        "address" : {
+          "type" : "integer"
+        },
+        "bigEndian" : {
+          "type" : "boolean"
+        },
+        "capacity" : {
+          "type" : "integer"
+        },
+        "hb" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "isReadOnly" : {
+          "type" : "boolean"
+        },
+        "limit" : {
+          "type" : "integer"
+        },
+        "mark" : {
+          "type" : "integer"
+        },
+        "nativeByteOrder" : {
+          "type" : "boolean"
+        },
+        "offset" : {
+          "type" : "integer"
+        },
+        "position" : {
+          "type" : "integer"
+        },
+        "segment" : {
+          "type" : "object"
+        }
+      }
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "binaryListValues" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/$defs/ByteBuffer"
+      }
+    },
+    "binaryValue" : {
+      "$ref" : "#/$defs/ByteBuffer"
+    },
+    "dataType" : {
+      "type" : "string"
+    },
+    "stringListValues" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "stringValue" : {
+      "type" : "string"
+    }
+  }
+}

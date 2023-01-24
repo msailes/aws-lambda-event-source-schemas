@@ -1,0 +1,41 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "accessKey" : {
+      "type" : "string"
+    },
+    "accountId" : {
+      "type" : "string"
+    },
+    "callerId" : {
+      "type" : "string"
+    },
+    "cognitoIdentity" : {
+      "type" : "object",
+      "properties" : {
+        "amr" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "identityId" : {
+          "type" : "string"
+        },
+        "identityPoolId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "principalOrgId" : {
+      "type" : "string"
+    },
+    "userArn" : {
+      "type" : "string"
+    },
+    "userId" : {
+      "type" : "string"
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "ByteBuffer" : {
+      "type" : "object",
+      "properties" : {
+        "address" : {
+          "type" : "integer"
+        },
+        "bigEndian" : {
+          "type" : "boolean"
+        },
+        "capacity" : {
+          "type" : "integer"
+        },
+        "hb" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "isReadOnly" : {
+          "type" : "boolean"
+        },
+        "limit" : {
+          "type" : "integer"
+        },
+        "mark" : {
+          "type" : "integer"
+        },
+        "nativeByteOrder" : {
+          "type" : "boolean"
+        },
+        "offset" : {
+          "type" : "integer"
+        },
+        "position" : {
+          "type" : "integer"
+        },
+        "segment" : {
+          "type" : "object"
+        }
+      }
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "b" : {
+      "$ref" : "#/$defs/ByteBuffer"
+    },
+    "bOOL" : {
+      "type" : "boolean"
+    },
+    "bS" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/$defs/ByteBuffer"
+      }
+    },
+    "l" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#"
+      }
+    },
+    "m" : {
+      "type" : "object"
+    },
+    "n" : {
+      "type" : "string"
+    },
+    "nS" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "nULLValue" : {
+      "type" : "boolean"
+    },
+    "s" : {
+      "type" : "string"
+    },
+    "sS" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    }
+  }
+}

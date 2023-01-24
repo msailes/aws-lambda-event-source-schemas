@@ -1,0 +1,21 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "groupsToOverride" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "iamRolesToOverride" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "preferredRole" : {
+      "type" : "string"
+    }
+  }
+}

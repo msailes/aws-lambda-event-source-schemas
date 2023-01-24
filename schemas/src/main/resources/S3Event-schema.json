@@ -1,0 +1,106 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "UserIdentityEntity" : {
+      "type" : "object",
+      "properties" : {
+        "principalId" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "records" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "awsRegion" : {
+            "type" : "string"
+          },
+          "eventName" : {
+            "type" : "string"
+          },
+          "eventSource" : {
+            "type" : "string"
+          },
+          "eventTime" : {
+            "type" : "string"
+          },
+          "eventVersion" : {
+            "type" : "string"
+          },
+          "requestParameters" : {
+            "type" : "object",
+            "properties" : {
+              "sourceIPAddress" : {
+                "type" : "string"
+              }
+            }
+          },
+          "responseElements" : {
+            "type" : "object",
+            "properties" : {
+              "xAmzId2" : {
+                "type" : "string"
+              },
+              "xAmzRequestId" : {
+                "type" : "string"
+              }
+            }
+          },
+          "s3" : {
+            "type" : "object",
+            "properties" : {
+              "bucket" : {
+                "type" : "object",
+                "properties" : {
+                  "arn" : {
+                    "type" : "string"
+                  },
+                  "name" : {
+                    "type" : "string"
+                  },
+                  "ownerIdentity" : {
+                    "$ref" : "#/$defs/UserIdentityEntity"
+                  }
+                }
+              },
+              "configurationId" : {
+                "type" : "string"
+              },
+              "object" : {
+                "type" : "object",
+                "properties" : {
+                  "eTag" : {
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "sequencer" : {
+                    "type" : "string"
+                  },
+                  "size" : {
+                    "type" : "integer"
+                  },
+                  "versionId" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "s3SchemaVersion" : {
+                "type" : "string"
+              }
+            }
+          },
+          "userIdentity" : {
+            "$ref" : "#/$defs/UserIdentityEntity"
+          }
+        }
+      }
+    }
+  }
+}

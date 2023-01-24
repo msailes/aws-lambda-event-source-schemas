@@ -1,0 +1,20 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "batchItemFailures" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "itemIdentifier" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "state" : {
+      "type" : "object"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "records" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "awsRegion" : {
+            "type" : "string"
+          },
+          "codeCommit" : {
+            "type" : "object",
+            "properties" : {
+              "references" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "commit" : {
+                      "type" : "string"
+                    },
+                    "created" : {
+                      "type" : "boolean"
+                    },
+                    "ref" : {
+                      "type" : "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "customData" : {
+            "type" : "string"
+          },
+          "eventId" : {
+            "type" : "string"
+          },
+          "eventName" : {
+            "type" : "string"
+          },
+          "eventPartNumber" : {
+            "type" : "integer"
+          },
+          "eventSource" : {
+            "type" : "string"
+          },
+          "eventSourceArn" : {
+            "type" : "string"
+          },
+          "eventTime" : {
+            "type" : "string"
+          },
+          "eventTotalParts" : {
+            "type" : "integer"
+          },
+          "eventTriggerConfigId" : {
+            "type" : "string"
+          },
+          "eventTriggerName" : {
+            "type" : "string"
+          },
+          "eventVersion" : {
+            "type" : "string"
+          },
+          "userIdentityArn" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}

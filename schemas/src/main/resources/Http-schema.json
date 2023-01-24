@@ -1,0 +1,21 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "method" : {
+      "type" : "string"
+    },
+    "path" : {
+      "type" : "string"
+    },
+    "protocol" : {
+      "type" : "string"
+    },
+    "sourceIp" : {
+      "type" : "string"
+    },
+    "userAgent" : {
+      "type" : "string"
+    }
+  }
+}

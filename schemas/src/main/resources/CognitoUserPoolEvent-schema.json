@@ -1,0 +1,32 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "callerContext" : {
+      "type" : "object",
+      "properties" : {
+        "awsSdkVersion" : {
+          "type" : "string"
+        },
+        "clientId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "region" : {
+      "type" : "string"
+    },
+    "triggerSource" : {
+      "type" : "string"
+    },
+    "userName" : {
+      "type" : "string"
+    },
+    "userPoolId" : {
+      "type" : "string"
+    },
+    "version" : {
+      "type" : "string"
+    }
+  }
+}

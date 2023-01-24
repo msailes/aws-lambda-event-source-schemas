@@ -1,0 +1,21 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "deniedFields" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "isAuthorized" : {
+      "type" : "boolean"
+    },
+    "resolverContext" : {
+      "type" : "object"
+    },
+    "ttlOverride" : {
+      "type" : "integer"
+    }
+  }
+}

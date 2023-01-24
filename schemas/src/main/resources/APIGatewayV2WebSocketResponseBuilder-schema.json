@@ -1,0 +1,24 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "body" : {
+      "type" : "string"
+    },
+    "headers" : {
+      "type" : "object"
+    },
+    "isBase64Encoded$set" : {
+      "type" : "boolean"
+    },
+    "isBase64Encoded$value" : {
+      "type" : "boolean"
+    },
+    "multiValueHeaders" : {
+      "type" : "object"
+    },
+    "statusCode" : {
+      "type" : "integer"
+    }
+  }
+}

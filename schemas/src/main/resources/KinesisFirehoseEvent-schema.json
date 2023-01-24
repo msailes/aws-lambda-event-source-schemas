@@ -1,0 +1,76 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "deliveryStreamArn" : {
+      "type" : "string"
+    },
+    "invocationId" : {
+      "type" : "string"
+    },
+    "records" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "approximateArrivalEpoch" : {
+            "type" : "integer"
+          },
+          "approximateArrivalTimestamp" : {
+            "type" : "integer"
+          },
+          "data" : {
+            "type" : "object",
+            "properties" : {
+              "address" : {
+                "type" : "integer"
+              },
+              "bigEndian" : {
+                "type" : "boolean"
+              },
+              "capacity" : {
+                "type" : "integer"
+              },
+              "hb" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "string"
+                }
+              },
+              "isReadOnly" : {
+                "type" : "boolean"
+              },
+              "limit" : {
+                "type" : "integer"
+              },
+              "mark" : {
+                "type" : "integer"
+              },
+              "nativeByteOrder" : {
+                "type" : "boolean"
+              },
+              "offset" : {
+                "type" : "integer"
+              },
+              "position" : {
+                "type" : "integer"
+              },
+              "segment" : {
+                "type" : "object"
+              }
+            }
+          },
+          "kinesisRecordMetadata" : {
+            "type" : "object"
+          },
+          "recordId" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "region" : {
+      "type" : "string"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "Map(String,List(Header))" : {
+      "type" : "object"
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "config" : {
+      "type" : "object",
+      "properties" : {
+        "distributionId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "request" : {
+      "type" : "object",
+      "properties" : {
+        "clientIp" : {
+          "type" : "string"
+        },
+        "headers" : {
+          "$ref" : "#/$defs/Map(String,List(Header))"
+        },
+        "httpVersion" : {
+          "type" : "string"
+        },
+        "method" : {
+          "type" : "string"
+        },
+        "uri" : {
+          "type" : "string"
+        }
+      }
+    },
+    "response" : {
+      "type" : "object",
+      "properties" : {
+        "headers" : {
+          "$ref" : "#/$defs/Map(String,List(Header))"
+        },
+        "httpVersion" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "string"
+        },
+        "statusDescription" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

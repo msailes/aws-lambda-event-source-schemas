@@ -1,0 +1,33 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "headers" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object"
+      }
+    },
+    "key" : {
+      "type" : "string"
+    },
+    "offset" : {
+      "type" : "integer"
+    },
+    "partition" : {
+      "type" : "integer"
+    },
+    "timestamp" : {
+      "type" : "integer"
+    },
+    "timestampType" : {
+      "type" : "string"
+    },
+    "topic" : {
+      "type" : "string"
+    },
+    "value" : {
+      "type" : "string"
+    }
+  }
+}

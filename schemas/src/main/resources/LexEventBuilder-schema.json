@@ -1,0 +1,54 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "Map(String,String)" : {
+      "type" : "object"
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "bot" : {
+      "type" : "object",
+      "properties" : {
+        "alias" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "version" : {
+          "type" : "string"
+        }
+      }
+    },
+    "currentIntent" : {
+      "type" : "object",
+      "properties" : {
+        "confirmationStatus" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "slots" : {
+          "$ref" : "#/$defs/Map(String,String)"
+        }
+      }
+    },
+    "invocationSource" : {
+      "type" : "string"
+    },
+    "messageVersion" : {
+      "type" : "string"
+    },
+    "outputDialogMode" : {
+      "type" : "string"
+    },
+    "sessionAttributes" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "userId" : {
+      "type" : "string"
+    }
+  }
+}

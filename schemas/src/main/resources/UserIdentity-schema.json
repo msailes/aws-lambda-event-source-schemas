@@ -1,0 +1,21 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "accessKeyId" : {
+      "type" : "string"
+    },
+    "accountId" : {
+      "type" : "string"
+    },
+    "arn" : {
+      "type" : "string"
+    },
+    "principalId" : {
+      "type" : "string"
+    },
+    "type" : {
+      "type" : "string"
+    }
+  }
+}

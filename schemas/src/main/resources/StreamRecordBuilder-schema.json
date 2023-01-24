@@ -1,0 +1,33 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "Map(String,AttributeValue)" : {
+      "type" : "object"
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "approximateCreationDateTime" : {
+      "type" : "string"
+    },
+    "keys" : {
+      "$ref" : "#/$defs/Map(String,AttributeValue)"
+    },
+    "newImage" : {
+      "$ref" : "#/$defs/Map(String,AttributeValue)"
+    },
+    "oldImage" : {
+      "$ref" : "#/$defs/Map(String,AttributeValue)"
+    },
+    "sequenceNumber" : {
+      "type" : "string"
+    },
+    "sizeBytes" : {
+      "type" : "integer"
+    },
+    "streamViewType" : {
+      "type" : "string",
+      "enum" : [ "NEW_IMAGE", "OLD_IMAGE", "NEW_AND_OLD_IMAGES", "KEYS_ONLY" ]
+    }
+  }
+}

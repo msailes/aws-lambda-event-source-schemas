@@ -1,0 +1,65 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "Map(String,String)" : {
+      "type" : "object"
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "callerContext" : {
+      "type" : "object",
+      "properties" : {
+        "awsSdkVersion" : {
+          "type" : "string"
+        },
+        "clientId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "region" : {
+      "type" : "string"
+    },
+    "request" : {
+      "type" : "object",
+      "properties" : {
+        "challengeAnswer" : {
+          "$ref" : "#/$defs/Map(String,String)"
+        },
+        "clientMetadata" : {
+          "$ref" : "#/$defs/Map(String,String)"
+        },
+        "privateChallengeParameters" : {
+          "$ref" : "#/$defs/Map(String,String)"
+        },
+        "userAttributes" : {
+          "$ref" : "#/$defs/Map(String,String)"
+        },
+        "userNotFound" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "response" : {
+      "type" : "object",
+      "properties" : {
+        "answerCorrect" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "triggerSource" : {
+      "type" : "string"
+    },
+    "userName" : {
+      "type" : "string"
+    },
+    "userPoolId" : {
+      "type" : "string"
+    },
+    "version" : {
+      "type" : "string"
+    }
+  }
+}

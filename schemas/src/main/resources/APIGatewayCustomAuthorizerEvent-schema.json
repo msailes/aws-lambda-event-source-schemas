@@ -1,0 +1,87 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "Map(String,String)" : {
+      "type" : "object"
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "authorizationToken" : {
+      "type" : "string"
+    },
+    "headers" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "httpMethod" : {
+      "type" : "string"
+    },
+    "identitySource" : {
+      "type" : "string"
+    },
+    "methodArn" : {
+      "type" : "string"
+    },
+    "path" : {
+      "type" : "string"
+    },
+    "pathParameters" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "queryStringParameters" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "requestContext" : {
+      "type" : "object",
+      "properties" : {
+        "accountId" : {
+          "type" : "string"
+        },
+        "apiId" : {
+          "type" : "string"
+        },
+        "httpMethod" : {
+          "type" : "string"
+        },
+        "identity" : {
+          "type" : "object",
+          "properties" : {
+            "apiKey" : {
+              "type" : "string"
+            },
+            "sourceIp" : {
+              "type" : "string"
+            }
+          }
+        },
+        "path" : {
+          "type" : "string"
+        },
+        "requestId" : {
+          "type" : "string"
+        },
+        "resourceId" : {
+          "type" : "string"
+        },
+        "resourcePath" : {
+          "type" : "string"
+        },
+        "stage" : {
+          "type" : "string"
+        }
+      }
+    },
+    "resource" : {
+      "type" : "string"
+    },
+    "stageVariables" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "type" : {
+      "type" : "string"
+    },
+    "version" : {
+      "type" : "string"
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "eventSourceArn" : {
+      "type" : "string"
+    },
+    "isFinalInvokeForWindow" : {
+      "type" : "boolean"
+    },
+    "isWindowTerminatedEarly" : {
+      "type" : "boolean"
+    },
+    "records" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "awsRegion" : {
+            "type" : "string"
+          },
+          "eventID" : {
+            "type" : "string"
+          },
+          "eventName" : {
+            "type" : "string"
+          },
+          "eventSource" : {
+            "type" : "string"
+          },
+          "eventSourceARN" : {
+            "type" : "string"
+          },
+          "eventVersion" : {
+            "type" : "string"
+          },
+          "invokeIdentityArn" : {
+            "type" : "string"
+          },
+          "kinesis" : {
+            "type" : "object",
+            "properties" : {
+              "approximateArrivalTimestamp" : {
+                "type" : "string"
+              },
+              "data" : {
+                "type" : "object",
+                "properties" : {
+                  "address" : {
+                    "type" : "integer"
+                  },
+                  "bigEndian" : {
+                    "type" : "boolean"
+                  },
+                  "capacity" : {
+                    "type" : "integer"
+                  },
+                  "hb" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "string"
+                    }
+                  },
+                  "isReadOnly" : {
+                    "type" : "boolean"
+                  },
+                  "limit" : {
+                    "type" : "integer"
+                  },
+                  "mark" : {
+                    "type" : "integer"
+                  },
+                  "nativeByteOrder" : {
+                    "type" : "boolean"
+                  },
+                  "offset" : {
+                    "type" : "integer"
+                  },
+                  "position" : {
+                    "type" : "integer"
+                  },
+                  "segment" : {
+                    "type" : "object"
+                  }
+                }
+              },
+              "encryptionType" : {
+                "type" : "string"
+              },
+              "kinesisSchemaVersion" : {
+                "type" : "string"
+              },
+              "partitionKey" : {
+                "type" : "string"
+              },
+              "sequenceNumber" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "shardId" : {
+      "type" : "string"
+    },
+    "state" : {
+      "type" : "object"
+    },
+    "window" : {
+      "type" : "object",
+      "properties" : {
+        "end" : {
+          "type" : "string"
+        },
+        "start" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

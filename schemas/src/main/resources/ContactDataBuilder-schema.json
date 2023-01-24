@@ -1,0 +1,52 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "attributes" : {
+      "type" : "object"
+    },
+    "channel" : {
+      "type" : "string"
+    },
+    "contactId" : {
+      "type" : "string"
+    },
+    "customerEndpoint" : {
+      "type" : "object",
+      "properties" : {
+        "address" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        }
+      }
+    },
+    "initialContactId" : {
+      "type" : "string"
+    },
+    "initiationMethod" : {
+      "type" : "string"
+    },
+    "instanceArn" : {
+      "type" : "string"
+    },
+    "previousContactId" : {
+      "type" : "string"
+    },
+    "queue" : {
+      "type" : "string"
+    },
+    "systemEndpoint" : {
+      "type" : "object",
+      "properties" : {
+        "address" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

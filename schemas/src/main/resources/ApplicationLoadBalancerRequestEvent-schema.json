@@ -1,0 +1,51 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "Map(String,List(String))" : {
+      "type" : "object"
+    },
+    "Map(String,String)" : {
+      "type" : "object"
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "body" : {
+      "type" : "string"
+    },
+    "headers" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "httpMethod" : {
+      "type" : "string"
+    },
+    "isBase64Encoded" : {
+      "type" : "boolean"
+    },
+    "multiValueHeaders" : {
+      "$ref" : "#/$defs/Map(String,List(String))"
+    },
+    "multiValueQueryStringParameters" : {
+      "$ref" : "#/$defs/Map(String,List(String))"
+    },
+    "path" : {
+      "type" : "string"
+    },
+    "queryStringParameters" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "requestContext" : {
+      "type" : "object",
+      "properties" : {
+        "elb" : {
+          "type" : "object",
+          "properties" : {
+            "targetGroupArn" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

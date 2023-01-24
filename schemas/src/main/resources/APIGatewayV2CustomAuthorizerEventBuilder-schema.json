@@ -1,0 +1,138 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "Map(String,String)" : {
+      "type" : "object"
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "cookies" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "headers" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "identitySource" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "pathParameters" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "queryStringParameters" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "rawPath" : {
+      "type" : "string"
+    },
+    "rawQueryString" : {
+      "type" : "string"
+    },
+    "requestContext" : {
+      "type" : "object",
+      "properties" : {
+        "accountId" : {
+          "type" : "string"
+        },
+        "apiId" : {
+          "type" : "string"
+        },
+        "authentication" : {
+          "type" : "object",
+          "properties" : {
+            "clientCert" : {
+              "type" : "object",
+              "properties" : {
+                "clientCertPem" : {
+                  "type" : "string"
+                },
+                "issuerDN" : {
+                  "type" : "string"
+                },
+                "serialNumber" : {
+                  "type" : "string"
+                },
+                "subjectDN" : {
+                  "type" : "string"
+                },
+                "validity" : {
+                  "type" : "object",
+                  "properties" : {
+                    "notAfter" : {
+                      "type" : "string"
+                    },
+                    "notBefore" : {
+                      "type" : "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "domainName" : {
+          "type" : "string"
+        },
+        "domainPrefix" : {
+          "type" : "string"
+        },
+        "http" : {
+          "type" : "object",
+          "properties" : {
+            "method" : {
+              "type" : "string"
+            },
+            "path" : {
+              "type" : "string"
+            },
+            "protocol" : {
+              "type" : "string"
+            },
+            "sourceIp" : {
+              "type" : "string"
+            },
+            "userAgent" : {
+              "type" : "string"
+            }
+          }
+        },
+        "requestId" : {
+          "type" : "string"
+        },
+        "routeKey" : {
+          "type" : "string"
+        },
+        "stage" : {
+          "type" : "string"
+        },
+        "time" : {
+          "type" : "string"
+        },
+        "timeEpoch" : {
+          "type" : "integer"
+        }
+      }
+    },
+    "routeArn" : {
+      "type" : "string"
+    },
+    "routeKey" : {
+      "type" : "string"
+    },
+    "stageVariables" : {
+      "$ref" : "#/$defs/Map(String,String)"
+    },
+    "type" : {
+      "type" : "string"
+    },
+    "version" : {
+      "type" : "string"
+    }
+  }
+}

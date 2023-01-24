@@ -1,0 +1,15 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "inputS3Url" : {
+      "type" : "string"
+    },
+    "outputRoute" : {
+      "type" : "string"
+    },
+    "outputToken" : {
+      "type" : "string"
+    }
+  }
+}

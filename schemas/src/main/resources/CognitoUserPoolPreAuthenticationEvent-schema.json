@@ -1,0 +1,52 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "Map(String,String)" : {
+      "type" : "object"
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "callerContext" : {
+      "type" : "object",
+      "properties" : {
+        "awsSdkVersion" : {
+          "type" : "string"
+        },
+        "clientId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "region" : {
+      "type" : "string"
+    },
+    "request" : {
+      "type" : "object",
+      "properties" : {
+        "userAttributes" : {
+          "$ref" : "#/$defs/Map(String,String)"
+        },
+        "userNotFound" : {
+          "type" : "boolean"
+        },
+        "validationData" : {
+          "$ref" : "#/$defs/Map(String,String)"
+        }
+      }
+    },
+    "response" : { },
+    "triggerSource" : {
+      "type" : "string"
+    },
+    "userName" : {
+      "type" : "string"
+    },
+    "userPoolId" : {
+      "type" : "string"
+    },
+    "version" : {
+      "type" : "string"
+    }
+  }
+}

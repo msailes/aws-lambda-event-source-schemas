@@ -1,0 +1,72 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "applicationArn" : {
+      "type" : "string"
+    },
+    "invocationId" : {
+      "type" : "string"
+    },
+    "records" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "data" : {
+            "type" : "object",
+            "properties" : {
+              "address" : {
+                "type" : "integer"
+              },
+              "bigEndian" : {
+                "type" : "boolean"
+              },
+              "capacity" : {
+                "type" : "integer"
+              },
+              "hb" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "string"
+                }
+              },
+              "isReadOnly" : {
+                "type" : "boolean"
+              },
+              "limit" : {
+                "type" : "integer"
+              },
+              "mark" : {
+                "type" : "integer"
+              },
+              "nativeByteOrder" : {
+                "type" : "boolean"
+              },
+              "offset" : {
+                "type" : "integer"
+              },
+              "position" : {
+                "type" : "integer"
+              },
+              "segment" : {
+                "type" : "object"
+              }
+            }
+          },
+          "lambdaDeliveryRecordMetadata" : {
+            "type" : "object",
+            "properties" : {
+              "retryHint" : {
+                "type" : "integer"
+              }
+            }
+          },
+          "recordId" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}

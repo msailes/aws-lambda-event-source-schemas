@@ -1,0 +1,44 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "records" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "attributes" : {
+            "type" : "object"
+          },
+          "awsRegion" : {
+            "type" : "string"
+          },
+          "body" : {
+            "type" : "string"
+          },
+          "eventSource" : {
+            "type" : "string"
+          },
+          "eventSourceArn" : {
+            "type" : "string"
+          },
+          "md5OfBody" : {
+            "type" : "string"
+          },
+          "md5OfMessageAttributes" : {
+            "type" : "string"
+          },
+          "messageAttributes" : {
+            "type" : "object"
+          },
+          "messageId" : {
+            "type" : "string"
+          },
+          "receiptHandle" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}

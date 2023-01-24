@@ -1,0 +1,41 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "Map(String,Object)" : {
+      "type" : "object"
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "logicalResourceId" : {
+      "type" : "string"
+    },
+    "oldResourceProperties" : {
+      "$ref" : "#/$defs/Map(String,Object)"
+    },
+    "physicalResourceId" : {
+      "type" : "string"
+    },
+    "requestId" : {
+      "type" : "string"
+    },
+    "requestType" : {
+      "type" : "string"
+    },
+    "resourceProperties" : {
+      "$ref" : "#/$defs/Map(String,Object)"
+    },
+    "resourceType" : {
+      "type" : "string"
+    },
+    "responseUrl" : {
+      "type" : "string"
+    },
+    "serviceToken" : {
+      "type" : "string"
+    },
+    "stackId" : {
+      "type" : "string"
+    }
+  }
+}

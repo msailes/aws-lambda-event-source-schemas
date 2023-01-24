@@ -1,0 +1,51 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "bucket" : {
+      "type" : "object",
+      "properties" : {
+        "arn" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "ownerIdentity" : {
+          "type" : "object",
+          "properties" : {
+            "principalId" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "configurationId" : {
+      "type" : "string"
+    },
+    "object" : {
+      "type" : "object",
+      "properties" : {
+        "eTag" : {
+          "type" : "string"
+        },
+        "key" : {
+          "type" : "string"
+        },
+        "sequencer" : {
+          "type" : "string"
+        },
+        "size" : {
+          "type" : "integer"
+        },
+        "versionId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "s3SchemaVersion" : {
+      "type" : "string"
+    }
+  }
+}

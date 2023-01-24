@@ -1,0 +1,51 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "appId" : {
+      "type" : "string"
+    },
+    "bodySize" : {
+      "type" : "integer"
+    },
+    "clusterId" : {
+      "type" : "string"
+    },
+    "contentEncoding" : {
+      "type" : "string"
+    },
+    "contentType" : {
+      "type" : "string"
+    },
+    "correlationId" : {
+      "type" : "string"
+    },
+    "deliveryMode" : {
+      "type" : "integer"
+    },
+    "expiration" : {
+      "type" : "string"
+    },
+    "headers" : {
+      "type" : "object"
+    },
+    "messageId" : {
+      "type" : "string"
+    },
+    "priority" : {
+      "type" : "integer"
+    },
+    "replyTo" : {
+      "type" : "string"
+    },
+    "timestamp" : {
+      "type" : "string"
+    },
+    "type" : {
+      "type" : "string"
+    },
+    "userId" : {
+      "type" : "string"
+    }
+  }
+}

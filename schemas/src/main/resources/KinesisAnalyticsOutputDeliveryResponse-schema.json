@@ -1,0 +1,21 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "records" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "recordId" : {
+            "type" : "string"
+          },
+          "result" : {
+            "type" : "string",
+            "enum" : [ "Ok", "DeliveryFailed" ]
+          }
+        }
+      }
+    }
+  }
+}
